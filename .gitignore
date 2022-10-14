@@ -1,3 +1,9 @@
+# Misc
+in/*
+out
+test_imgs
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
