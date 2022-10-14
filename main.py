@@ -82,7 +82,6 @@ class ImageCombiner:
     def combine_images(self, img_abs_paths: list):
         if len(img_abs_paths) < 2:
             self.custom_error_exit("Only got 1 image! You need at least 2 images to combine! Exiting...", 0)
-        print(img_abs_paths)
         orig = Image.open(img_abs_paths[0])
         for img_path in img_abs_paths[1:]:
             with Image.open(img_path) as temp_img:
