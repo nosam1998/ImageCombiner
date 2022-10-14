@@ -22,7 +22,7 @@ class ImageCombiner:
         print(msg)
         exit(code)
 
-    def helper_txt(self):
+    def helper_txt(self) -> None:
         help_file_name = os.path.join(self.output_dir_abs_path, "READ_ME_FIRST.txt")
         with open(help_file_name, "w") as f:
             f.write(f"The file name is structured like so... {'_'.join(k.name for k in self.original_dir_order)}.{self.output_file_ext}")
@@ -79,7 +79,7 @@ class ImageCombiner:
         with os.scandir(path) as i:
             return [d for d in i if d.is_dir()]
 
-    def combine_images(self, img_abs_paths: list):
+    def combine_images(self, img_abs_paths: list) -> None:
         if len(img_abs_paths) < 2:
             self.custom_error_exit("Only got 1 image! You need at least 2 images to combine! Exiting...", 0)
         orig = Image.open(img_abs_paths[0])
